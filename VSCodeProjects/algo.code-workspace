@@ -7,5 +7,9 @@
 			"path": "javatest"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"files.associations": {
+			"typeinfo": "cpp"
+		}
+	}
 }
