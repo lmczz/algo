@@ -68,7 +68,7 @@ void swap(int a[], int i, int j)
     {
         return;
     }
-    printf("swap %d[%d], %d[%d]\n", a[i],i,a[j],j);
+    printf("swap %d[%d], %d[%d]\n", a[i], i, a[j], j);
     int tmp = a[i];
     a[i] = a[j];
     a[j] = tmp;
@@ -93,33 +93,24 @@ int sort_quick(int a[], int start, int end)
             j--;
         }
 
-        // if (j == i)
-        // { // end
-        //     if (a[start] > a[i])
-        //         swap(a, start, i); //i should be small value
-        //     break;
-        // }
-        // else
-        // { // j find small vale
-        //     //move i
-            while (i < j && a[i+1] <= base)
-            {
-                i++;
-            }
-            if (i == j)
-            {
-                if (a[start] > a[i])
-                    swap(a, start, i); //i should be small value
-                break;
-            }
-            else
-            { // swap i(small), j(larger)
-                swap(a, i, j);
-                print_array(a,8);
-            }
+        while (i < j && a[i + 1] <= base)
+        {
+            i++;
+        }
+        if (i == j)
+        {
+            if (a[start] > a[i])
+                swap(a, start, i); //i should be small value
+            break;
+        }
+        else
+        { // swap i(small), j(larger)
+            swap(a, i, j);
+            print_array(a, 8);
+        }
         // }
     }
-    print_array(a,8);
+    print_array(a, 8);
 
     // left and right
     printf("--i is %d\n", i);
